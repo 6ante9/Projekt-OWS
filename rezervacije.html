@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rezervacije | Club Eclipse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="hero" style="background-image: url('img/club-bg.jpg');">
+    <div class="overlay"></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="cjenik.html">Cjenik</a></li>
+        <li><a href="ponuda.html">Ponuda</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="rezervacije.html" class="active">Rezervacije</a></li>
+      </ul>
+    </nav>
+    <div class="page-title">
+      <h1>Rezervacije</h1>
+    </div>
+  </header>
+
+  <section class="reservation-section">
+    <h2>Rezerviraj svoj stol</h2>
+    <form id="reservationForm">
+      <input type="text" id="ime" name="ime" placeholder="Ime" required />
+      <input
+        type="text"
+        id="prezime"
+        name="prezime"
+        placeholder="Prezime"
+        required
+      />
+      <input type="date" id="datum" name="datum" required />
+      <select id="tip" name="vrsta" required>
+        <option value="">Odaberi vrstu</option>
+        <option value="stol">Stol (max 5 osoba)</option>
+        <option value="separe">Separe (6-10 osoba)</option>
+      </select>
+      <input
+        type="number"
+        id="osobe"
+        name="osobe"
+        placeholder="Broj osoba"
+        min="1"
+        max="10"
+        required
+      />
+      <button type="submit">Rezerviraj</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Club Eclipse. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

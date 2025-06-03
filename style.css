@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: #f0c808;
+    text-shadow: 0 0 15px #000;
+    animation: slideDown 0.6s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .slogan {
+    font-size: 1.5rem;
+    color: #f5f5dc;
+    font-style: italic;
+}
+
+.page-title {
+    position: relative;
+    z-index: 2;
+    padding-top: 140px;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f0c808;
+    text-shadow: 0 0 12px #000;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    padding: 0.6rem 1.2rem;
+    max-width: 95vw;
+    width: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: transparent;
+}
+
+.navbar ul::-webkit-scrollbar {
+    height: 6px;
+}
+
+.navbar ul::-webkit-scrollbar-thumb {
+    background: #f0c808aa;
+    border-radius: 3px;
+}
+
+.navbar ul::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    font-size: 1rem;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: #f0c808;
+    transition: width 0.15s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+    width: 60%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: linear-gradient(135deg, #f0c808, #d19a07);
+    color: #000;
+    box-shadow: 0 0 10px #f0c808aa;
+}
+
+.intro,
+.menu-section,
+.offers-section,
+.about-section,
+.reservation-section {
+    margin: 3rem auto;
+    padding: 3rem;
+    max-width: 900px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(28, 28, 28, 0.85), rgba(12, 12, 12, 0.85));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.25);
+    transition: none;
+}
+
+.intro h2,
+.menu-section h2,
+.offers-section h2,
+.about-section h2,
+.reservation-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+    color: #f0c808;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #000;
+}
+
+ul.menu-list,
+ul.offer-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+ul li {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    font-size: 1.1rem;
+    transition: background 0.15s ease;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    animation: fadeIn 0.8s ease-in;
+}
+
+input,
+select,
+button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input,
+select {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background: linear-gradient(135deg, #f0c808, #d19a07);
+    color: #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 4px rgba(0,0,0,0.2);
+    letter-spacing: 0.05em;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #d19a07, #f0c808);
+    transform: translateY(-2px);
+    color: #111;
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 6px rgba(240, 200, 8, 0.7);
+}
+
+footer {
+    background: linear-gradient(to right, rgba(15, 15, 15, 0.9), rgba(40, 40, 40, 0.9));
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #f5f5f5;
+    border-top: 1px solid #333;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .hero-text h1,
+    .page-title h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-text .slogan {
+        font-size: 1.1rem;
+    }
+
+    .navbar ul {
+        flex-direction: row !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0.6rem;
+        padding: 0.5rem 1rem;
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+        width: auto;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        display: inline-block;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .intro,
+    .menu-section,
+    .offers-section,
+    .about-section,
+    .reservation-section {
+        padding: 2rem 1.5rem;
+        max-width: 95%;
+        margin: 2rem auto;
+    }
+
+    form {
+        gap: 0.8rem;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title h1 {
+        font-size: 2rem;
+    }
+
+    .intro h2,
+    .menu-section h2,
+    .offers-section h2,
+    .about-section h2,
+    .reservation-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar ul {
+        gap: 0.5rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.95rem;
+        padding: 0.45rem 1rem;
+        white-space: nowrap;
+        text-align: center;
+        width: auto;
+        box-sizing: border-box;
+    }
+
+    input,
+    select,
+    button {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 430px) {
+  .navbar {
+    max-width: 98vw;
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+  }
+
+  .navbar ul {
+    padding-right: 0.5rem;
+    scroll-padding-right: 1rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  header.hero {
+    padding: 0 1rem;
+    height: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text .slogan {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    left: 0 !important;
+    transform: none !important;
+    width: 100vw;
+    padding: 0 0.5rem;
+  }
+
+  .navbar ul {
+    justify-content: center;
+    padding: 0.3rem 0.5rem;
+    background: rgba(0,0,0,0.95);
+    border-radius: 0;
+    box-shadow: none;
+    gap: 0.4rem;
+  }
+
+  .navbar a {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .intro,
+  .menu-section,
+  .offers-section,
+  .about-section,
+  .reservation-section {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+}
+
+.about-section {
+    padding: 3rem 3rem 4rem 3rem;
+}
+
+.about-box {
+    background: rgba(20, 20, 20, 0.85);
+    border-radius: 15px;
+    padding: 30px 40px;
+    max-width: 700px;
+    margin: 40px auto 0 auto;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: center;
+    user-select: text;
+    transition: box-shadow 0.3s ease;
+}
+
+.about-box p {
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+    color: #ddd;
+}
+
+.about-box strong {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: block;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.about-box a {
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-box a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.about-box p:first-of-type {
+    text-align: justify;
+    text-justify: inter-word;
+}
