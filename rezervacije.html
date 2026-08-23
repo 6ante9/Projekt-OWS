@@ -13,6 +13,7 @@
 <body>
   <header class="hero" style="background-image: url('img/club-bg.jpg');">
     <div class="overlay"></div>
+
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Početna</a></li>
@@ -22,6 +23,7 @@
         <li><a href="rezervacije.html" class="active">Rezervacije</a></li>
       </ul>
     </nav>
+
     <div class="page-title">
       <h1>Rezervacije</h1>
     </div>
@@ -29,8 +31,17 @@
 
   <section class="reservation-section">
     <h2>Rezerviraj svoj stol</h2>
+
     <form id="reservationForm">
-      <input type="text" id="ime" name="ime" placeholder="Ime" required />
+
+      <input
+        type="text"
+        id="ime"
+        name="ime"
+        placeholder="Ime"
+        required
+      />
+
       <input
         type="text"
         id="prezime"
@@ -38,12 +49,23 @@
         placeholder="Prezime"
         required
       />
-      <input type="date" id="datum" name="datum" required />
+
+      <input
+        type="text"
+        id="datum"
+        name="datumRodjenja"
+        placeholder="Datum rođenja"
+        onfocus="this.type='date'"
+        onblur="if(!this.value) this.type='text'"
+        required
+      />
+
       <select id="tip" name="vrsta" required>
         <option value="">Odaberi vrstu</option>
         <option value="stol">Stol (max 5 osoba)</option>
         <option value="separe">Separe (6-10 osoba)</option>
       </select>
+
       <input
         type="number"
         id="osobe"
@@ -53,12 +75,14 @@
         max="10"
         required
       />
+
       <button type="submit">Rezerviraj</button>
+
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Club Eclipse. All rights reserved.</p>
+    <p>&copy; 2026 Club Eclipse. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

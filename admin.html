@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin panel | Club Eclipse</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Admin stranica je skrivena dok JavaScript ne potvrdi admina -->
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="admin-header">
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="admin.html" class="active">Admin panel</a></li>
+      </ul>
+    </nav>
+
+    <div class="admin-title">
+      <h1>Admin panel</h1>
+      <p>Club Eclipse</p>
+    </div>
+
+  </header>
+
+  <main class="admin-section">
+
+    <div class="admin-box">
+
+      <h2>Pregled rezervacija</h2>
+
+      <div class="table-container">
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Ime i prezime</th>
+              <th>Email</th>
+              <th>Datum rođenja</th>
+              <th>Vrsta</th>
+              <th>Broj osoba</th>
+              <th>Akcija</th>
+            </tr>
+          </thead>
+
+          <tbody id="reservationTableBody"></tbody>
+        </table>
+
+      </div>
+
+      <p id="nemaRezervacija" class="nema-rezervacija">
+        Trenutno nema rezervacija.
+      </p>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Club Eclipse. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

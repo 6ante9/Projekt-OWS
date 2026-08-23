@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registracija | Club Eclipse</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <header class="hero" style="background-image: url('img/club-bg.jpg');">
+    <div class="overlay"></div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="cjenik.html">Cjenik</a></li>
+        <li><a href="ponuda.html">Ponuda</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="rezervacije.html">Rezervacije</a></li>
+        <li><a href="login.html">Prijava</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-title">
+      <h1>Registracija</h1>
+    </div>
+  </header>
+
+  <section class="reservation-section">
+    <h2>Kreiraj račun</h2>
+
+    <form id="registerForm">
+
+      <input
+        type="text"
+        id="registerIme"
+        placeholder="Ime"
+        required
+      />
+
+      <input
+        type="text"
+        id="registerPrezime"
+        placeholder="Prezime"
+        required
+      />
+
+      <input
+        type="email"
+        id="registerEmail"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        type="password"
+        id="registerLozinka"
+        placeholder="Lozinka"
+        minlength="6"
+        required
+      />
+
+      <input
+        type="password"
+        id="registerLozinkaPonovi"
+        placeholder="Ponovi lozinku"
+        minlength="6"
+        required
+      />
+
+      <button type="submit">Registriraj se</button>
+
+    </form>
+
+    <p class="auth-link">
+      Već imaš račun?
+      <a href="login.html">Prijavi se</a>
+    </p>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Club Eclipse. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

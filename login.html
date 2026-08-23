@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prijava | Club Eclipse</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <header class="hero" style="background-image: url('img/club-bg.jpg');">
+    <div class="overlay"></div>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="cjenik.html">Cjenik</a></li>
+        <li><a href="ponuda.html">Ponuda</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="rezervacije.html">Rezervacije</a></li>
+        <li><a href="login.html" class="active">Prijava</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-title">
+      <h1>Prijava</h1>
+    </div>
+  </header>
+
+  <section class="reservation-section">
+    <h2>Prijavi se</h2>
+
+    <form id="loginForm">
+
+      <input
+        type="email"
+        id="loginEmail"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        type="password"
+        id="loginLozinka"
+        placeholder="Lozinka"
+        required
+      />
+
+      <button type="submit">Prijavi se</button>
+
+    </form>
+
+    <p class="auth-link">
+      Nemaš račun?
+      <a href="register.html">Registriraj se</a>
+    </p>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Club Eclipse. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
